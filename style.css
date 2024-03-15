@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(0, 0%, 81%);
+}
+
+.grid-card {
+  width: 80%;
+  height: 95vh;
+  margin: 15px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, auto);
+  gap: 20px 20px;
+  grid-template-areas: "item1 item1 item2 item3" "item1 item1 item2 item3" "item1 item1 item2 item3" "item4 item5 item5 item3" "item4 item5 item5 item3" "item4 item5 item5 item3";
+}
+
+.card-item1,
+.card-item2,
+.card-item3,
+.card-item4,
+.card-item5 {
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+.grid-card .card-item1 {
+  background-color: hsl(263, 55%, 52%);
+  grid-area: item1;
+  color: hsl(0, 0%, 100%);
+}
+
+.title {
+  display: flex;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid hsl(0, 0%, 100%);
+}
+
+.text-title {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+}
+
+span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+small {
+  font-size: 1rem;
+  opacity: 50%;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+p {
+  line-height: 20px;
+  padding: 10px 0px;
+  font-weight: 400;
+  opacity: 70%;
+}
+
+.grid-card .card-item2 {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+  grid-area: item2;
+}
+
+.grid-card .card-item3 {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: item3;
+  color: #000;
+}
+
+.grid-card .card-item3 h2 {
+  line-height: 25px;
+}
+
+.grid-card .card-item3 p {
+  line-height: 20px;
+  padding: 15px 0px;
+  font-size: 0.9rem;
+}
+
+.grid-card .card-item4 {
+  background-color: hsl(0, 0%, 100%);
+  color: #000;
+  grid-area: item4;
+}
+
+.grid-card .card-item4 .text h2 {
+  font-size: 23px;
+}
+
+.grid-card .card-item4 .text p {
+  font-size: 1.1rem;
+  padding: 15px 0px;
+}
+
+.grid-card .card-item5 {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+  grid-area: item5;
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .grid-card {
+    width: 80%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 15px 20px;
+    grid-template-areas: "item1 item1 item2" "item4 item5 item5" "item3 item3 item3";
+  }
+  .grid-card .card-item1 {
+    grid-area: item1;
+    padding: 20px 15px;
+  }
+  .grid-card .card-item2 {
+    grid-area: item2;
+    padding: 20px 15px;
+  }
+  .grid-card .card-item3 {
+    grid-area: item3;
+    padding: 20px 15px;
+  }
+  .grid-card .card-item4 {
+    grid-area: item4;
+    padding: 20px 15px;
+  }
+  .grid-card .card-item5 {
+    grid-area: item5;
+    padding: 20px 15px;
+  }
+}
+@media (min-width: 450px) and (max-width: 901px) {
+  .grid-card {
+    width: 80%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 15px 15px;
+    grid-template-areas: "item1 item1 item1 item1" "item2 item2 item4 item4" "item5 item5 item5 item5" "item3 item3 item3 item3";
+  }
+  .grid-card .card-item1 {
+    grid-area: item1;
+    padding: 10px 15px;
+  }
+  .grid-card .card-item2 {
+    grid-area: item2;
+    padding: 10px 15px;
+  }
+  .grid-card .card-item3 {
+    grid-area: item3;
+    padding: 10px 15px;
+  }
+  .grid-card .card-item4 {
+    grid-area: item4;
+    padding: 10px 15px;
+  }
+  .grid-card .card-item5 {
+    grid-area: item5;
+    padding: 10px 15px;
+  }
+}
+@media (min-width: 150px) and (max-width: 451px) {
+  .grid-card {
+    width: 80%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 25px 0px;
+    grid-template-areas: "item1 item1" "item2 item2" "item3 item3" "item4 item4" "item5 item5";
+  }
+  .grid-card .card-item1 {
+    grid-area: item1;
+  }
+  .grid-card .card-item2 {
+    grid-area: item2;
+  }
+  .grid-card .card-item3 {
+    grid-area: item3;
+  }
+  .grid-card .card-item4 {
+    grid-area: item4;
+  }
+  .grid-card .card-item5 {
+    grid-area: item5;
+  }
+}/*# sourceMappingURL=style.css.map */
